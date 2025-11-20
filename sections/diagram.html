@@ -1,1 +1,41 @@
-a
+<section>
+    <h2>Research Model</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+            graph LR
+                subgraph "Antecedents (AI Factors)"
+                    A[AI-Enabled Competence<br/><i>(Supports Competence)</i>]:::growth
+                    B[AI-Induced Dependency<br/><i>(Thwarts Autonomy)</i>]:::pressure
+                end
+
+                subgraph "Mechanism (Dualistic Passion)"
+                    C[Harmonious Passion<br/><i>(Healthy Drive)</i>]:::growth
+                    D[Obsessive Passion<br/><i>(Compulsive Drive)</i>]:::pressure
+                end
+
+                subgraph "Outcome"
+                    E((Entrepreneurial<br/>Intention)):::outcome
+                end
+
+                subgraph "Context (Moderator)"
+                    F[Student Hardiness<br/><i>(Control/Commitment)</i>]:::context
+                end
+
+                %% Paths
+                A -->|H1: Empowerment| C
+                B -->|H2: Pressure| D
+                C -->|H3: Sustainable| E
+                D -->|H4: Unstable| E
+                
+                %% Moderation Line
+                F -.->|H5: Buffers Effect| E
+
+                %% Styling Classes
+                classDef growth fill:#dcfce7,stroke:#166534,stroke-width:2px;
+                classDef pressure fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
+                classDef outcome fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px;
+                classDef context fill:#f1f5f9,stroke:#64748b,stroke-dasharray: 5 5;
+        </div>
+    </div>
+    <div class="diagram-caption">Figure 1. Structural Equation Model integrating AI Usage, SDT, and Dualistic Passion.</div>
+</section>
