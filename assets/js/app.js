@@ -7,19 +7,21 @@ async function loadComponent(id, file) {
         document.getElementById(id).innerHTML = text;
     } catch (error) {
         console.error(error);
-        document.getElementById(id).innerHTML = `<p style="color:red">Error loading section: ${file}</p>`;
+        document.getElementById(id).innerHTML = `<p style="color:red; text-align:center;">Error loading: ${file}</p>`;
     }
 }
 
 // Load all sections sequentially
+// Updated to match your clean filenames (no numbers)
 async function init() {
     await Promise.all([
-        loadComponent('header-section', 'sections/01-header.html'),
-        loadComponent('diagram-section', 'sections/02-diagram.html'),
-        loadComponent('definitions-section', 'sections/03-definitions.html'),
-        loadComponent('hypotheses-section', 'sections/04-hypotheses.html'),
-        loadComponent('methodology-section', 'sections/05-methodology.html'),
-        loadComponent('footer-section', 'sections/06-footer.html')
+        loadComponent('header-section', 'sections/header.html'),
+        loadComponent('abstract-section', 'sections/abstract.html'),
+        loadComponent('diagram-section', 'sections/diagram.html'),
+        loadComponent('definitions-section', 'sections/definitions.html'),
+        loadComponent('hypotheses-section', 'sections/hypotheses.html'),
+        loadComponent('methodology-section', 'sections/methodology.html'),
+        loadComponent('footer-section', 'sections/footer.html')
     ]);
 
     // Initialize Mermaid AFTER content is loaded
@@ -33,9 +35,11 @@ async function init() {
         }
     });
     
-    // Force re-render of diagrams
-    mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    // Force re-render of diagrams to ensure they display correctly
+    setTimeout(() => {
+        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+    }, 100);
 }
 
-// Run
+// Run the script when the page loads
 document.addEventListener('DOMContentLoaded', init);
