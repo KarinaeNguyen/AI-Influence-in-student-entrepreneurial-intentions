@@ -12,16 +12,16 @@ async function loadComponent(id, file) {
 }
 
 // Load all sections sequentially
-// Updated to match your clean filenames (no numbers)
 async function init() {
     await Promise.all([
-        loadComponent('header-section', 'sections/header.html'),
-        loadComponent('abstract-section', 'sections/abstract.html'),
-        loadComponent('diagram-section', 'sections/diagram.html'),
-        loadComponent('definitions-section', 'sections/definitions.html'),
-        loadComponent('hypotheses-section', 'sections/hypotheses.html'),
-        loadComponent('methodology-section', 'sections/methodology.html'),
-        loadComponent('footer-section', 'sections/footer.html')
+        // FIXED: Added ./ before sections
+        loadComponent('header-section', './sections/header.html'),
+        loadComponent('abstract-section', './sections/abstract.html'),
+        loadComponent('diagram-section', './sections/diagram.html'),
+        loadComponent('definitions-section', './sections/definitions.html'),
+        loadComponent('hypotheses-section', './sections/hypotheses.html'),
+        loadComponent('methodology-section', './sections/methodology.html'),
+        loadComponent('footer-section', './sections/footer.html')
     ]);
 
     // Initialize Mermaid AFTER content is loaded
