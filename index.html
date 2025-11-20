@@ -3,243 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Model: AI & Entrepreneurial Passion in Vietnam</title>
+    <title>Research E-Paper: AI & Entrepreneurship</title>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --background: #f8fafc;
-            --surface: #ffffff;
-            --text: #0f172a;
-            --text-light: #64748b;
-            --accent-growth: #10b981;
-            --accent-pressure: #ef4444;
-        }
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--background);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        h1 {
-            font-weight: 800;
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
-
-        /* Diagram Card Styling */
-        .diagram-card {
-            background: var(--surface);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin-bottom: 3rem;
-            overflow-x: auto;
-        }
-
-        .diagram-caption {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: 1rem;
-            font-style: italic;
-        }
-
-        /* Section Styling */
-        .section {
-            background: var(--surface);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid #e2e8f0;
-        }
-
-        h2 {
-            color: var(--secondary);
-            font-size: 1.5rem;
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
-            margin-top: 0;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            color: #334155;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .badge-growth { background: #dcfce7; color: #166534; }
-        .badge-pressure { background: #fee2e2; color: #991b1b; }
-        .badge-context { background: #e0f2fe; color: #075985; }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        li::before {
-            content: "•";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .citation {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 6px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>The AI-Passion-Entrepreneurship Pathway</h1>
-        <div class="subtitle">A Mixed-Methods Explanatory Model for Vietnamese Students</div>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">
-            <strong>Theory Base:</strong> Self-Determination Theory (SDT) & Dualistic Model of Passion (DMP)
-        </p>
-    </header>
+    <main class="container">
+        <div id="header-section"></div>
+        <div id="diagram-section"></div>
+        <div id="definitions-section"></div>
+        <div id="hypotheses-section"></div>
+        <div id="methodology-section"></div>
+        <div id="footer-section"></div>
+    </main>
 
-    <div class="diagram-card">
-        <div class="mermaid">
-            %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#dbeafe', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f0f9ff'}}}%%
-            graph LR
-                subgraph "Antecedents (AI Factors)"
-                    A[AI-Enabled Competence<br/><i>(Supports Competence)</i>]:::growth
-                    B[AI-Induced Dependency<br/><i>(Thwarts Autonomy)</i>]:::pressure
-                end
-
-                subgraph "Mechanism (Dualistic Passion)"
-                    C[Harmonious Passion<br/><i>(Healthy Drive)</i>]:::growth
-                    D[Obsessive Passion<br/><i>(Compulsive Drive)</i>]:::pressure
-                end
-
-                subgraph "Outcome"
-                    E((Entrepreneurial<br/>Intention)):::outcome
-                end
-
-                subgraph "Context (Moderator)"
-                    F[Student Hardiness<br/><i>(Control/Commitment)</i>]:::context
-                end
-
-                %% Paths
-                A -->|H1: Empowerment| C
-                B -->|H2: Pressure| D
-                C -->|H3: Sustainable| E
-                D -->|H4: Unstable| E
-                
-                %% Moderation Line
-                F -.->|H5: Buffers Effect| E
-
-                %% Styling Classes
-                classDef growth fill:#dcfce7,stroke:#166534,stroke-width:2px;
-                classDef pressure fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
-                classDef outcome fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px;
-                classDef context fill:#f1f5f9,stroke:#64748b,stroke-dasharray: 5 5;
-        </div>
-        <div class="diagram-caption">Figure 1. Proposed Structural Equation Model integrating AI Usage, SDT, and Dualistic Passion.</div>
-    </div>
-
-    <div class="section">
-        <h2>1. Variable Definitions & Theory</h2>
-        
-        <h3><span class="badge badge-growth">Path A: The Growth Path</span></h3>
-        <ul>
-            [cite_start]<li><strong>AI-Enabled Competence (IV):</strong> The perception that AI tools enhance efficiency and skill, satisfying the SDT need for <em>Competence</em> <span class="citation">[cite: 508]</span>.</li>
-            <li><strong>Harmonious Passion (Mediator):</strong> Entrepreneurship is internalized autonomously into the student's identity. [cite_start]They engage because they love it <span class="citation">[cite: 25, 1293]</span>.</li>
-        </ul>
-
-        <h3><span class="badge badge-pressure">Path B: The Pressure Path</span></h3>
-        <ul>
-            [cite_start]<li><strong>AI-Induced Dependency (IV):</strong> The feeling that one cannot function without AI, thwarting the SDT need for <em>Autonomy</em> and creating external pressure <span class="citation">[cite: 1294]</span>.</li>
-            [cite_start]<li><strong>Obsessive Passion (Mediator):</strong> Entrepreneurship is pursued due to internal or external pressure (e.g., fear of missing out, status) <span class="citation">[cite: 102, 529]</span>.</li>
-        </ul>
-
-        <h3><span class="badge badge-context">Contextual Factors</span></h3>
-        <ul>
-            <li><strong>Student Hardiness (Moderator):</strong> A personality trait comprising Control, Commitment, and Challenge. [cite_start]High hardiness helps Vietnamese students navigate transitional stress <span class="citation">[cite: 849, 858]</span>.</li>
-            [cite_start]<li><strong>Entrepreneurial Intention (DV):</strong> The outcome variable representing the conscious resolve to start a business <span class="citation">[cite: 1283]</span>.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>2. Research Hypotheses</h2>
-        <ul>
-            <li><strong>H1:</strong> AI-Enabled Competence is positively related to Harmonious Passion.</li>
-            <li><strong>H2:</strong> AI-Induced Dependency is positively related to Obsessive Passion.</li>
-            <li><strong>H3:</strong> Harmonious Passion positively predicts Entrepreneurial Intention (with higher sustainability).</li>
-            <li><strong>H4:</strong> Obsessive Passion positively predicts Entrepreneurial Intention (but is prone to conflict).</li>
-            <li><strong>H5:</strong> Student Hardiness moderates the relationship between Passion and Intention (strengthening resilience).</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>3. Methodology: Mixed-Methods</h2>
-        <p>This study utilizes an <strong>Explanatory Sequential Design</strong>:</p>
-        <ol style="margin-left: 1.5rem;">
-            <li><strong>Phase 1 (Quantitative):</strong> Survey 200-300 Vietnamese students using validated scales (e.g., Vallerand’s Passion Scale, Bartone’s Hardiness Scale). Analyze using SEM.</li>
-            <li><strong>Phase 2 (Qualitative):</strong> Interview outliers to explain <em>how</em> AI fosters dependency vs. competence.</li>
-        </ol>
-    </div>
-
-    <footer>
-        <p>Research Project: AI Influence on Vietnamese Student Entrepreneurship</p>
-    </footer>
-</div>
-
-<script>
-    mermaid.initialize({ startOnLoad: true });
-</script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 </html>
