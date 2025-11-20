@@ -3,23 +3,23 @@
     <div class="diagram-container">
         <div class="mermaid">
             graph LR
-                %% Define Subgraphs with IDs to prevent errors
-                subgraph S1 [Antecedents - AI Factors]
-                    A["AI-Enabled Competence<br/>(Supports Competence)"]:::growth
-                    B["AI-Induced Dependency<br/>(Thwarts Autonomy)"]:::pressure
+                %% Safe Subgraph Syntax
+                subgraph "Antecedents (AI Factors)"
+                    A["AI-Enabled Competence"]:::growth
+                    B["AI-Induced Dependency"]:::pressure
                 end
 
-                subgraph S2 [Mechanism - Dualistic Passion]
-                    C["Harmonious Passion<br/>(Healthy Drive)"]:::growth
-                    D["Obsessive Passion<br/>(Compulsive Drive)"]:::pressure
+                subgraph "Mechanism (Dualistic Passion)"
+                    C["Harmonious Passion"]:::growth
+                    D["Obsessive Passion"]:::pressure
                 end
 
-                subgraph S3 [Outcome]
-                    E(("Entrepreneurial<br/>Intention")):::outcome
+                subgraph "Outcome"
+                    E(("Entrepreneurial Intention")):::outcome
                 end
 
-                subgraph S4 [Context - Moderator]
-                    F["Student Hardiness<br/>(Control/Commitment)"]:::context
+                subgraph "Context (Moderator)"
+                    F["Student Hardiness"]:::context
                 end
 
                 %% Define Paths
@@ -32,10 +32,10 @@
                 F -.->|H5: Buffers Effect| E
 
                 %% Define Styling Classes
-                classDef growth fill:#dcfce7,stroke:#166534,stroke-width:2px;
-                classDef pressure fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
-                classDef outcome fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px;
-                classDef context fill:#f1f5f9,stroke:#64748b,stroke-dasharray: 5 5;
+                classDef growth fill:#dcfce7,stroke:#166534,stroke-width:2px
+                classDef pressure fill:#fee2e2,stroke:#991b1b,stroke-width:2px
+                classDef outcome fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px
+                classDef context fill:#f1f5f9,stroke:#64748b,stroke-dasharray: 5 5
         </div>
     </div>
     <div class="diagram-caption">Figure 1. Structural Equation Model integrating AI Usage, SDT, and Dualistic Passion.</div>
