@@ -3,25 +3,26 @@
     <div class="diagram-container">
         <div class="mermaid">
             graph LR
-                subgraph "Antecedents (AI Factors)"
-                    A[AI-Enabled Competence<br/><i>(Supports Competence)</i>]:::growth
-                    B[AI-Induced Dependency<br/><i>(Thwarts Autonomy)</i>]:::pressure
+                %% Define Subgraphs with IDs to prevent errors
+                subgraph S1 [Antecedents - AI Factors]
+                    A["AI-Enabled Competence<br/>(Supports Competence)"]:::growth
+                    B["AI-Induced Dependency<br/>(Thwarts Autonomy)"]:::pressure
                 end
 
-                subgraph "Mechanism (Dualistic Passion)"
-                    C[Harmonious Passion<br/><i>(Healthy Drive)</i>]:::growth
-                    D[Obsessive Passion<br/><i>(Compulsive Drive)</i>]:::pressure
+                subgraph S2 [Mechanism - Dualistic Passion]
+                    C["Harmonious Passion<br/>(Healthy Drive)"]:::growth
+                    D["Obsessive Passion<br/>(Compulsive Drive)"]:::pressure
                 end
 
-                subgraph "Outcome"
-                    E((Entrepreneurial<br/>Intention)):::outcome
+                subgraph S3 [Outcome]
+                    E(("Entrepreneurial<br/>Intention")):::outcome
                 end
 
-                subgraph "Context (Moderator)"
-                    F[Student Hardiness<br/><i>(Control/Commitment)</i>]:::context
+                subgraph S4 [Context - Moderator]
+                    F["Student Hardiness<br/>(Control/Commitment)"]:::context
                 end
 
-                %% Paths
+                %% Define Paths
                 A -->|H1: Empowerment| C
                 B -->|H2: Pressure| D
                 C -->|H3: Sustainable| E
@@ -30,7 +31,7 @@
                 %% Moderation Line
                 F -.->|H5: Buffers Effect| E
 
-                %% Styling Classes
+                %% Define Styling Classes
                 classDef growth fill:#dcfce7,stroke:#166534,stroke-width:2px;
                 classDef pressure fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
                 classDef outcome fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px;
